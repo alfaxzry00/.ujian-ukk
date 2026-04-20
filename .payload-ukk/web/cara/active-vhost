@@ -1,0 +1,45 @@
+Aktifkan config yang tadi:
+
+------> sudo a2ensite ukk-alfa.net.conf
+
+Optional (biar default Apache gak ganggu):
+
+------> sudo a2dissite 000-default.conf
+
+Reload Apache:
+
+------> sudo systemctl reload apache2
+4. Setting Domain ke IP (PENTING)
+
+Karena ini di VirtualBox (lokal), domain ukk-alfa.net belum dikenal. Jadi kamu harus mapping manual.
+
+Kalau di Linux (VM itu sendiri):
+
+Edit:
+
+------> sudo nano /etc/hosts
+
+Tambahkan:
+
+127.0.0.1   ukk-alfa.net
+Kalau akses dari PC host (Windows):
+
+Edit file:
+
+C:\Windows\System32\drivers\etc\hosts
+
+Tambahkan:
+
+192.168.x.x   ukk-alfa.net
+
+(ganti 192.168.x.x dengan IP VM kamu, cek pakai ip a)
+
+5. Tes di Browser
+
+Buka:
+
+http://ukk-alfa.net
+
+Kalau berhasil, harus muncul:
+
+Web UKK Alfa Berjalan
